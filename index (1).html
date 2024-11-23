@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Water Dispenser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Screen -->
+  <div id="mainScreen">
+    <h1>Smart Water Dispenser</h1>
+    <div class="status-container">
+      <div id="connectionStatus" class="status">Checking connection...</div>
+    </div>
+
+    <div id="cupStatus" class="status">Place a Cup</div>
+    <button class="button" onclick="toggleCup()">Simulate Cup Placement</button>
+
+    <div class="quantity-container">
+      <label for="quantitySlider">Select Quantity (50ml - 300ml):</label>
+      <input type="range" id="quantitySlider" min="50" max="300" step="50" value="50" oninput="updateQuantity()">
+      <div id="quantityDisplay">Selected: 50ml</div>
+    </div>
+
+    <button class="button" onclick="dispenseWater()">Dispense</button>
+    <button class="button" onclick="enterTestMode()">Test Dispense</button>
+
+    <div class="animation-container">
+      <div id="cup" class="cup">
+        <div id="water" class="water hidden"></div>
+        <div id="percentageDisplay" class="percentage hidden"></div>
+      </div>
+      <div id="progressContainer" class="progress-container hidden">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Test Dispense Screen -->
+  <div id="testScreen" class="hidden">
+    <h1>Test Dispense</h1>
+    <button class="button" id="testButton" onmousedown="startTestDispense()" onmouseup="stopTestDispense()">Press and Hold to Dispense</button>
+    <button class="button" onclick="returnToMain()">Return to Main</button>
+  </div>
+
+  <!-- Password Screen -->
+  <div id="passwordScreen" class="hidden">
+    <h1>Enter Password</h1>
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button class="button" onclick="checkPassword()">Submit</button>
+    <button class="button" onclick="returnToMain()">Cancel</button>
+  </div>
+
+  <footer>
+    <p>Made by Jotham Raphael Banji</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  color: #007BFF;
+}
+
+.status-container, .quantity-container {
+  margin: 20px 0;
+}
+
+.status {
+  font-size: 18px;
+  color: #555;
+}
+
+.connected {
+  color: #28a745;
+}
+
+.disconnected {
+  color: #FF4C4C;
+}
+
+#cupStatus {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #FF4C4C;
+}
+
+.connected-cup {
+  color: #28a745;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="range"] {
+  width: 80%;
+  margin: 10px 0;
+}
+
+#quantityDisplay {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #007BFF;
+}
+
+.button {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.animation-container {
+  margin-top: 40px;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cup {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  border: 5px solid #333;
+  border-radius: 0 0 50px 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: linear-gradient(to top, #d9d9d9, #ffffff);
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, #007BFF, #00BFFF);
+  transition: height 3s ease-in-out;
+}
+
+.percentage {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.progress-container {
+  margin-top: 20px;
+  width: 150px;
+  height: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #007BFF;
+  transition: width 3s ease-in-out;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
